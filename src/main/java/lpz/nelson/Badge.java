@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.ecosystem;
+package lpz.nelson;
 
 public class Badge {
 

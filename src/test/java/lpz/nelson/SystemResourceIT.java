@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.ecosystem;
+package lpz.nelson;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
