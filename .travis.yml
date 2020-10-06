@@ -24,4 +24,4 @@ deploy:
     secure: $HEROKU
   on:
     branch: master
-  app: api-rest-basica #Por defecto este dato se toma del artifact pom
+  app: api-rest-basika #Por defecto este dato se toma del artifact pom
