@@ -16,7 +16,7 @@ script:
   #Test unitarios y de integracion con cobertura (jacoco)
   - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
   #Sonarcloud
-  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nelson-lz -Dsonar.login=$SONAR
+  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nelson-lpz-soft -Dsonar.login=$SONAR
   #Deploy https://api-rest-basica.herokuapp.com/system/version
 deploy:
   provider: heroku

@@ -2,6 +2,9 @@
 ## Plantilla de arquitectura
 > Plantilla con Spring básico (API, test) 
 
+Bettercodehub [![BCH compliance](https://bettercodehub.com/edge/badge/nelson-lz/api-rest-basica?branch=master)](https://bettercodehub.com/)
+Sonarclould 
+
 ## Ecosistema
 * Java
 * Maven
