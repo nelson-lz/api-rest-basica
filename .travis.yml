@@ -13,8 +13,8 @@ script:
   -Dsonar.login=$SONAR
 deploy:
   provider: heroku
-  api_key:
-    secure: $HEROKU3
+  api_key: $HEROKU
   on:
     branch: master
   app: api-rest-basika
+
