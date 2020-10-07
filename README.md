@@ -12,7 +12,6 @@ Heroku [![Heroku broken](https://api-rest-basika.herokuapp.com/system/version-ba
 * Maven
 * Logs
 * JUnit5
-* IntelliJ
 * GitHub
 * Travis-CI
 * Sonar Cloud
