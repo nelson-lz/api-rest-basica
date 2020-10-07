@@ -14,7 +14,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU2
+    secure: $HEROKU3
   on:
     branch: master
   app: api-rest-basika
