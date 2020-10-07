@@ -1,27 +1,20 @@
 language: java
 branches:
-  - develop
-  - /^release-[0-999].[0-999]$/
-  - master
+- develop
+- "/^release-[0-999].[0-999]$/"
+- master
 notifications:
   email:
     recipients:
-      - nelsonlz@outlook.com
-# services:
-# - mysql
-# - mongodb
-# before_install:
-# - mysql -e 'CREATE DATABASE IF NOT EXISTS forge;'
+    - nelsonlz@outlook.com
 script:
-  #Test unitarios y de integracion con cobertura (jacoco)
-  - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
-  #Sonarcloud
-  - mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nelson-lpz-soft -Dsonar.login=$SONAR
-  #Deploy https://api-rest-basica.herokuapp.com/system/version
+- mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+- mvn sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=nelson-lpz-soft
+  -Dsonar.login=$SONAR
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU
+    secure: kk3fMtkQWHMvo2BV50pQm+9aRrCm67uRgjjIv0W9Jd9aDUCCCxa+cXVHHG/W5M5QzBkb6u/Zt2Iz7JSMUKH6eBnj+hnjZVvbBeULA0x1acoOGOrwD726Mwdr5e180l2moSmSqerN9P+xipL+4gx4fFrm/sKbegASrm0e3XoXuPwz8uMXm3Gu+1OJwce9N4p7nBlKL0tWx/SL9F6jygglSll+YSTGM5u8NECs9i3n1m3lj8TTWjlvjeGcFL4cPyfL+94pzZ2wgw8up/3X3qMSJqt7jIQHTLhmlIQRZzmJDhGnCUUh4ot/sdlRs1QxajAfAG0oKGmdITaT3+KwHQZcwU/heM2MA0ZtenMNJjwioaWszpI9iAUnMVer4+1dcbyYQ92NDoK3pi+vjR+JJxcCiMEz+8/R8qI/2GzIJ53q1BoKhnmxtt7lSI+VwVRijZqZnRD7mrG2gn30t/5arv172LDFAuc3CQVAF6XZOXhKLCx26pCaquz2sDrpRTrivgC5zp+QYdWyhJKiBa8qs6h6aEF5O4jca5RhybOg2xfWhnhB6yGbJpLn3iBNk9Xs4PViFuzjyFMU3IMuUFL6gxtOP3tH5o0eJBcrOEZ5QcQlcCPOgKjbzVkLJzwUGK+ww33Y/eoSqg1PgBpY5Jhq5jOXO5ud6QyJwbF8IjKEjaQscvU=
   on:
     branch: master
-  app: api-rest-basika #Por defecto este dato se toma del artifact pom
+  app: api-rest-basika
